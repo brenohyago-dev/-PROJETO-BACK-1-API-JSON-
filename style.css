@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Public Sans', sans-serif;
+}
+
+body {
+  background-color: #0b0d17;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  background: #000000;
+  border-bottom: 1px solid #1f293d;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.explore {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  color: #888;
+}
+
+.search {
+  background: #15192b;
+  border: 1px solid #2d3748;
+  color: #fff;
+  padding: 8px 12px 8px 36px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.search:focus {
+  border-color: #e03c31;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.live {
+  background: #e03c31;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.live-dot {
+  font-size: 0.6rem;
+  margin-right: 4px;
+}
+
+/* NEWS SECTION */
+.news {
+  background: #111526;
+  padding: 20px 0;
+  border-bottom: 1px solid #1f293d;
+}
+
+.news-time {
+  color: #e03c31;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.line {
+  height: 1px;
+  background: #2d3748;
+  margin: 10px 0;
+}
+
+.news-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.news-title-wrap img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.news-text {
+  max-width: 600px;
+  color: #cbd5e0;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(11, 13, 23, 0.7), rgba(11, 13, 23, 0.9)),
+              url('https://www.nasa.gov/wp-content/uploads/2023/03/52763262961_2d667c4e51_k.jpg') center/cover;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #e2e8f0;
+}
+
+.hero button {
+  background: #e03c31;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.hero button:hover {
+  background: #b82e25;
+}
+
+/* GALLERY & ASTEROIDS */
+.gallery, .asteroids, .favorites {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 4px solid #e03c31;
+  padding-left: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  background: #15192b;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #2d3748;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.gallery-content {
+  padding: 15px;
+}
+
+.gallery-content h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.gallery-content p {
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+/* CONTROLS & TABLES */
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="date"] {
+  background: #15192b;
+  border: 1px solid #2d3748;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.controls button {
+  background: #2b6cb0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.controls button:hover {
+  background: #2c5282;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  background: #15192b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.stats span {
+  font-weight: bold;
+  color: #63b3ed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #15192b;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #2d3748;
+}
+
+th {
+  background: #1a202c;
+  color: #a0aec0;
+}
+
+.perigoso {
+  color: #fc8181;
+  font-weight: bold;
+}
+
+.seguro {
+  color: #68d391;
+}
+
+/* FAVORITOS & BOTOES STAR */
+.btn-fav, .btn-fav-ast {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #4a5568;
+  color: #a0aec0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.gallery-card .btn-fav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.btn-fav.active, .btn-fav-ast.active {
+  color: #f6e05e;
+  border-color: #f6e05e;
+}
+
+.fav-toggle-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e03c31;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.fav-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #f6e05e;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites {
+  background: #0f1222;
+  border-top: 2px solid #2d3748;
+}
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-clear {
+  background: #c53030;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favorites-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fav-tab {
+  background: #1a202c;
+  color: #a0aec0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.fav-tab.active {
+  background: #2b6cb0;
+  color: #fff;
+}
+
+.fav-panel {
+  display: none;
+}
+
+.fav-panel.active {
+  display: block;
+}
+
+.fav-empty {
+  color: #718096;
+  padding: 20px 0;
+}
+
+.validation-message {
+  color: #fc8181;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
