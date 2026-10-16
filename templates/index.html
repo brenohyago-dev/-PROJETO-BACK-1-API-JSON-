@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorador NASA - Projeto Flask MVC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav-container">
+      <div class="nav-left">
+        <span class="explore"><i class="fas fa-bars"></i> Explore</span>
+        <div class="search-wrap">
+          <i class="fas fa-search search-icon"></i>
+          <input class="search" id="searchInput" placeholder="Pesquisar fotos no MySQL...">
+        </div>
+      </div>
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA Logo">
+      </div>
+      <div class="nav-right">
+        <a href="#"><i class="fas fa-calendar-alt"></i> News & Events</a>
+        <a href="#"><i class="fas fa-film"></i> Multimedia</a>
+        <a href="#"><i class="fas fa-tv"></i> NASA+</a>
+        <span class="live"><i class="fas fa-circle live-dot"></i> LIVE</span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="news">
+      <div class="container">
+        <span class="news-time">LIVE 1:45 p.m. EDT (1745 UTC)</span>
+        <div class="line"></div>
+        <div class="news-grid">
+          <div class="news-title-wrap">
+            <img src="https://www.nasa.gov/wp-content/uploads/2026/02/54932690834-554a3bc4d2-o.jpg?resize=200,200" alt="News Conference">
+            <h2>News Conference</h2>
+          </div>
+          <p class="news-text">NASA will host a news conference on NASA astronaut Anil Menon's upcoming mission to the ISS.</p>
+          <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Humans in Space</h1>
+        <p>Exploração espacial e acervo astronómico integrado com API Python/Flask e banco de dados MySQL.</p>
+        <button>NASA's SpaceX Crew-13</button>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <h2>Galeria de Imagens (MySQL Database)</h2>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <div class="pagination-container">
+          <button class="pagination-btn" onclick="paginaAnterior()"><i class="fas fa-chevron-left"></i> Anterior</button>
+          <span class="pagination-info" id="infoPagina">Página 1</span>
+          <button class="pagination-btn" onclick="proximaPagina()">Próxima <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
