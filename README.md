@@ -1,4 +1,4 @@
-# 🚀 Projeto Web API - Galeria NASA (Flask + MySQL + MVC)
+# 🚀 Projeto Web API (Breno Hyago e Rodrigo Yuzo)- Galeria NASA (Flask + MySQL + MVC)
 
 Aplicação Web API JSON desenvolvida em **Python com Flask**, utilizando a arquitetura **MVC** e integrada com **MySQL no Docker**.
 
